@@ -1,32 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- This declares the XML version and character encoding -->
+
 <classpath>
-	<classpathentry kind="src" output="target/classes" path="src/main/java">
-		<attributes>
-			<attribute name="optional" value="true"/>
-			<attribute name="maven.pomderived" value="true"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="src" output="target/test-classes" path="src/test/java">
-		<attributes>
-			<attribute name="optional" value="true"/>
-			<attribute name="maven.pomderived" value="true"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
-		<attributes>
-			<attribute name="maven.pomderived" value="true"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
-		<attributes>
-			<attribute name="maven.pomderived" value="true"/>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry excluding="**" kind="src" output="target/classes" path="src/main/resources">
-		<attributes>
-			<attribute name="maven.pomderived" value="true"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="output" path="target/classes"/>
+  <!-- Root element for Eclipse classpath configuration -->
+
+  <classpathentry kind="src" output="target/classes" path="src/main/java">
+    <!-- Declares a source folder for main Java code -->
+    <attributes>
+      <attribute name="optional" value="true"/>
+      <!-- Marks this source as optional (can be ignored if not found) -->
+      <attribute name="maven.pomderived" value="true"/>
+      <!-- Indicates this entry is generated from the Maven POM file -->
+    </attributes>
+  </classpathentry>
+
+  <classpathentry kind="src" output="target/test-classes" path="src/test/java">
+    <!-- Declares a source folder for test Java code -->
+    <attributes>
+      <attribute name="optional" value="true"/>
+      <!-- Marks test source as optional -->
+      <attribute name="maven.pomderived" value="true"/>
+      <!-- Indicates this entry is Maven-managed -->
+    </attributes>
+  </classpathentry>
+
+  <classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
+    <!-- Declares the JDK runtime environment used (Java SE 1.8) -->
+    <attributes>
+      <attribute name="maven.pomderived" value="true"/>
+      <!-- Managed via Maven -->
+    </attributes>
+  </classpathentry>
+
+  <classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
+    <!-- Adds Maven dependency container (manages dependencies declared in pom.xml) -->
+    <attributes>
+      <attribute name="maven.pomderived" value="true"/>
+      <!-- Managed by Maven plugin for Eclipse -->
+      <attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+      <!-- Sets dependencies to be placed in /WEB-INF/lib in the deployed WAR -->
+    </attributes>
+  </classpathentry>
+
+  <classpathentry excluding="**" kind="src" output="target/classes" path="src/main/resources">
+    <!-- Declares resources folder, but excludes all subfiles/folders for some reason (check if intentional) -->
+    <attributes>
+      <attribute name="maven.pomderived" value="true"/>
+      <!-- Again, managed by Maven -->
+    </attributes>
+  </classpathentry>
+
+  <classpathentry kind="output" path="target/classes"/>
+  <!-- Default output directory for compiled classes -->
+
 </classpath>
+<!-- End of classpath file -->
